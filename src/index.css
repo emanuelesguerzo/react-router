@@ -1,0 +1,271 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+textarea,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* COMMON */
+/* Layout */
+.container {
+  margin: 0 auto;
+  width: 70%; 
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  column-gap: 20px;
+  flex-wrap: wrap;
+}
+
+.input {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 5px;
+}
+
+/* Header */
+header {
+  background-color: #ececec;
+  padding: 20px;
+  margin-bottom: 30px;
+  font-size: 1.3rem;
+}
+
+/* Form */
+label {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+textarea,
+select,
+input {
+  width: 50%;
+  padding: 5px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.post-tags input {
+  margin-bottom: 15px;
+}
+
+.filter {
+  margin-bottom: 40px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Tags List */
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-left: 100px;
+}
+
+.inputTag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.tags-list {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 5px; 
+  padding-top: 15px;
+}
+
+/* Buttons */
+.btn {
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.submit {
+  background-color: #4747f7;
+  width: 50%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 24px;
+  font-size: 1.3rem;
+  margin: 40px 0;
+  align-self: center;
+  transition: scale 0.4s ease-in-out;
+}
+
+/* Remove Button */
+.remove {
+  width: 45px;
+  height: 45px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  border: none;
+}
+
+/* Button Hovers */
+.btn.submit:hover {
+  background-color: #3636d1; 
+  scale: 1.1;
+}
+
+.btn.remove:hover {
+  background-color: #d60000; 
+}
+
+.filter-container {
+  margin-bottom: 40px;
+}
+
+/* Card */
+.card {
+  width: calc((100% - 20px) / 2);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px 10px 5px 10px;
+  margin-bottom: 20px;
+}
+
+/* Card Image */
+.card-image img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* Tag Customisation */
+.tag {
+  border-radius: 24px;
+  padding: 6px 10px;
+  font-weight: bold;
+  border: none;
+  color: #ffffff;
+  user-select: none;
+}
+
+/* Tag Colors */
+.dolce {
+  background-color: #f50909;
+}
+
+.fritto {
+  background-color: #cca629;
+}
+
+.semplice {
+  background-color: #0b773c;
+}
+
+.colazione {
+  background-color: #3f76f5;
+}
+
+.tradizionale {
+  background-color: #ce7df3;
+}
+
+.snack {
+  background-color: #820c99;
+}
+
+.salato {
+  background-color: #ca3eac;
+}
+
+.vegetariano {
+  background-color: #68a063;
+}
+
+.primo {
+  background-color: #31a8c9;
+}
+
+.colorato {
+  background-color: #db7c2e;
+}
+
+.rustico {
+  background-color: #a0522d;
+}
+
+/* Card Heading */
+.card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  margin-bottom: 10px;
+}
+
+/* Card Content */
+.card-content {
+  line-height: 1.5;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+/* Card Footer */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Empty Post List */
+.empty-list {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+span {
+  font-style: italic;
+}
+
+.check {
+  color: #008000;
+}
+
+.cross {
+  color: #ff0000;
+}
+
+/* ////////////////// */
+/* // MEDIA QUERY // */
+/* //////////////// */
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 100%;
+  }
+  .submit {
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    width: 90%;
+  }
+}
