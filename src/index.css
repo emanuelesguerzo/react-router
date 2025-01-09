@@ -47,6 +47,9 @@ header {
   padding: 20px;
   margin-bottom: 30px;
   font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Form */
@@ -249,6 +252,23 @@ span {
 
 .cross {
   color: #ff0000;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+nav .active {
+  color: #ffffff;
+  background-color: #000000;
+  padding: 10px 18px;
+  border-radius: 25px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
 }
 
 /* ////////////////// */
