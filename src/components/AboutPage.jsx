@@ -1,6 +1,6 @@
 function AboutPage() {
     return (
-        <h1>Welcome Home!</h1>
+        <h1>About Us!</h1>
     )
 }
 

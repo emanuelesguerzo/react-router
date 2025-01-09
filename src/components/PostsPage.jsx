@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios"
-import AppCard from "./components/AppCard";
-import FormPrint from "./components/FormPrint";
-import AppHeader from "./components/AppHeader";
+import AppCard from "./AppCard";
+import FormPrint from "./FormPrint";
+import AppHeader from "./AppHeader";
 const apiUrl = import.meta.env.VITE_API_URL;
 
 const initialPostData = {
@@ -156,3 +156,5 @@ function PostsPage() {
         </>
     )
 }
+
+export default PostsPage;
