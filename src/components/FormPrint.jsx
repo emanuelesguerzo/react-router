@@ -1,11 +1,11 @@
-const FormPrint = ({ handleNewPostSubmit, handleInputChange, newPost, setNewPost, availableTags}) => {
+const FormPrint = ({ newPostSubmit, inputChange, newPost, setNewPost, availableTags }) => {
 
     return (
 
-        <form action="" className="container" onSubmit={handleNewPostSubmit}>
+        <form action="" className="container" onSubmit={newPostSubmit}>
 
             {/* Title Input */}
-            <div className="input post-title">
+            <div className="input-container post-title">
                 <label htmlFor="PostName">Titolo</label>
                 <input
                     type="text"
@@ -13,12 +13,12 @@ const FormPrint = ({ handleNewPostSubmit, handleInputChange, newPost, setNewPost
                     id="PostName"
                     name="title"
                     value={newPost.title}
-                    onChange={handleInputChange}
+                    onChange={inputChange}
                 />
             </div>
 
             {/* Image Input */}
-            <div className=" input post-image">
+            <div className=" input-container post-image">
                 <label htmlFor="PostImage">URL Immagine</label>
                 <input
                     type="text"
@@ -26,12 +26,12 @@ const FormPrint = ({ handleNewPostSubmit, handleInputChange, newPost, setNewPost
                     id="PostImage"
                     name="image"
                     value={newPost.image}
-                    onChange={handleInputChange}
+                    onChange={inputChange}
                 />
             </div>
 
             {/* Content Input */}
-            <div className="input post-content">
+            <div className="input-container post-content">
                 <label htmlFor="PostContent">Contenuto</label>
                 <textarea
                     rows="4"
@@ -40,16 +40,16 @@ const FormPrint = ({ handleNewPostSubmit, handleInputChange, newPost, setNewPost
                     id="PostContent"
                     name="content"
                     value={newPost.content}
-                    onChange={handleInputChange}
+                    onChange={inputChange}
                 ></textarea>
             </div>
 
             {/* Tags Checkboxes */}
-            <div className="input post-tags">
+            <div className="input-container post-tags">
                 <label htmlFor="TagContainer">Tag</label>
                 <div className="tag-container" id="TagContainer">
                     {availableTags.map((curTag) => (
-                        <div key={curTag} className="inputTag">
+                        <div key={curTag} className="inputTag-container">
                             <input
                                 className=""
                                 type="checkbox"

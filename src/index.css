@@ -1,3 +1,23 @@
+/* CUSTOM PROPERTIES */
+:root {
+	--tag-bgcolor-1: #f50909;
+	--tag-bgcolor-2: #cca629;
+  --tag-bgcolor-3 : #0b773c;
+  --tag-bgcolor-4 : #3f76f5;  
+  --tag-bgcolor-5 : #ce7df3;  
+  --tag-bgcolor-6 : #820c99;  
+  --tag-bgcolor-7 : #ca3eac;  
+  --tag-bgcolor-8 : #68a063;  
+  --tag-bgcolor-9 : #31a8c9;  
+  --tag-bgcolor-10 : #db7c2e;  
+  --tag-bgcolor-11 : #a0522d; 
+  --main-blue: #4747f7;
+  --main-blue-hover: #3636d1;
+  --remove-btn-color: #ff0000;
+  --remove-btn-hover: #d60000; 
+}
+
+
 /* RESET */
 * {
   margin: 0;
@@ -32,32 +52,54 @@ ul {
   flex-wrap: wrap;
 }
 
-.input {
-  border: 1px solid black;
+.input-container {
+  border: 1px solid #000000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
-/* Header */
+/* HEADER */
 header {
   background-color: #ececec;
   padding: 20px;
   margin-bottom: 30px;
-  font-size: 1.3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Form */
+/* Navbar */
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Nav Active */
+nav .active {
+  color: #ffffff;
+  background-color: var(--main-blue);
+  padding: 10px 18px;
+  border-radius: 25px;
+}
+
+/* MAIN */
+/* FORM */
+/* Input Labels */
 label {
   font-size: 1.3rem;
   font-weight: bold;
 }
 
+/* Inputs */
+/* General */
 textarea,
 select,
 input {
@@ -67,19 +109,15 @@ input {
   font-size: 1rem;
 }
 
-.post-tags input {
-  margin-bottom: 15px;
-}
-
-.filter {
-  margin-bottom: 40px;
-}
-
 textarea {
   resize: vertical;
 }
 
-/* Tags List */
+/* Input Tags List */
+.post-tags input {
+  margin-bottom: 15px;
+}
+
 .tag-container {
   display: flex;
   flex-wrap: wrap;
@@ -87,66 +125,64 @@ textarea {
   margin-left: 100px;
 }
 
-.inputTag {
+.inputTag-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 1.1rem;
 }
 
-.tags-list {
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: 5px; 
-  padding-top: 15px;
+/* Filter Input */
+.filter {
+  margin-bottom: 15px;
+  border: 1px dotted #000000;
 }
 
-/* Buttons */
+/* BUTTONS */
+/* General */
 .btn {
   color: #ffffff;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
 
+/* Submit Button */
 .submit {
-  background-color: #4747f7;
+  background-color: var(--main-blue);
   width: 50%;
   padding: 10px 15px;
   border: none;
   border-radius: 24px;
   font-size: 1.3rem;
-  margin: 40px 0;
+  margin-bottom: 40px;
   align-self: center;
   transition: scale 0.4s ease-in-out;
 }
 
 /* Remove Button */
 .remove {
+  display: inline-block;
   width: 45px;
   height: 45px;
-  background-color: #ff0000;
+  background-color: var(--remove-btn-color);
   border-radius: 50%;
   border: none;
 }
 
 /* Button Hovers */
 .btn.submit:hover {
-  background-color: #3636d1; 
+  background-color: var(--main-blue-hover); 
   scale: 1.1;
 }
 
 .btn.remove:hover {
-  background-color: #d60000; 
+  background-color: var(--remove-btn-hover); 
 }
 
-.filter-container {
-  margin-bottom: 40px;
-}
-
-/* Card */
+/* CARD */
 .card {
   width: calc((100% - 20px) / 2);
-  border: 2px solid black;
+  border: 2px solid #000000;
   border-radius: 10px;
   padding: 10px 10px 5px 10px;
   margin-bottom: 20px;
@@ -158,7 +194,7 @@ textarea {
   border-radius: 6px;
 }
 
-/* Tag Customisation */
+/* Card Tags */
 .tag {
   border-radius: 24px;
   padding: 6px 10px;
@@ -168,58 +204,65 @@ textarea {
   user-select: none;
 }
 
+.tags-list {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 5px; 
+  padding-top: 15px;
+}
+
 /* Tag Colors */
 .dolce {
-  background-color: #f50909;
+  background-color: var(--tag-bgcolor-1);
 }
 
 .fritto {
-  background-color: #cca629;
+  background-color: var(--tag-bgcolor-2);
 }
 
 .semplice {
-  background-color: #0b773c;
+  background-color: var(--tag-bgcolor-3);
 }
 
 .colazione {
-  background-color: #3f76f5;
+  background-color: var(--tag-bgcolor-4);
 }
 
 .tradizionale {
-  background-color: #ce7df3;
+  background-color: var(--tag-bgcolor-5);
 }
 
 .snack {
-  background-color: #820c99;
+  background-color: var(--tag-bgcolor-6);
 }
 
 .salato {
-  background-color: #ca3eac;
+  background-color: var(--tag-bgcolor-7);
 }
 
 .vegetariano {
-  background-color: #68a063;
+  background-color: var(--tag-bgcolor-8);
 }
 
 .primo {
-  background-color: #31a8c9;
+  background-color: var(--tag-bgcolor-9);
 }
 
 .colorato {
-  background-color: #db7c2e;
+  background-color: var(--tag-bgcolor-10);
 }
 
 .rustico {
-  background-color: #a0522d;
+  background-color: var(--tag-bgcolor-11);
 }
 
+/* CARD */
 /* Card Heading */
 .card-heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 0;
-  margin-bottom: 10px;
+  padding: 16px 0;
 }
 
 /* Card Content */
@@ -229,63 +272,68 @@ textarea {
   word-wrap: break-word;
 }
 
-/* Card Footer */
-.card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 /* Empty Post List */
 .empty-list {
   font-size: 1.2rem;
   font-style: italic;
 }
 
-span {
-  font-style: italic;
-}
-
-.check {
-  color: #008000;
-}
-
-.cross {
-  color: #ff0000;
-}
-
-nav ul {
-  display: flex;
-  gap: 30px;
-}
-
-nav .active {
-  color: #ffffff;
+/* FOOTER */
+footer {
   background-color: #000000;
-  padding: 10px 18px;
-  border-radius: 25px;
+  color: #ffffff;
 }
 
-nav a {
-  color: black;
-  text-decoration: none;
+h4 {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.3rem;
 }
 
 /* ////////////////// */
 /* // MEDIA QUERY // */
 /* //////////////// */
+/* Small Laptop */
 @media screen and (max-width: 1024px) {
+  /* Card */
   .card {
     width: 100%;
   }
+
+  /* Button */
   .submit {
     width: 80%;
   }
-
 }
 
+/* Mobile */
 @media screen and (max-width: 425px) {
+  /* Layout */
   .container {
     width: 90%;
+    flex-direction: column;
+  }
+
+  /* Header */
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  /* Input */
+  .post-tags {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tag-container {
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  /* Filter Input */
+  .filter {
+    gap: 12px;
   }
 }

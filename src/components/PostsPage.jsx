@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import axios from "axios"
 import AppCard from "./AppCard";
 import FormPrint from "./FormPrint";
-import AppHeader from "./AppHeader";
 const apiUrl = import.meta.env.VITE_API_URL;
 
 const initialPostData = {
@@ -62,7 +61,6 @@ function PostsPage() {
         axios.get(`${apiUrl}/tags`)
             .then((resp) => {
                 setTag(resp.data.tags)
-                console.log(resp.data.tags)
             })
     }
 
@@ -112,8 +110,8 @@ function PostsPage() {
             <main>
 
                 <FormPrint
-                    handleNewPostSubmit={handleNewPostSubmit}
-                    handleInputChange={handleInputChange}
+                    newPostSubmit={handleNewPostSubmit}
+                    inputChange={handleInputChange}
                     newPost={newPost}
                     availableTags={availableTags}
                     setNewPost={setNewPost}
@@ -121,7 +119,7 @@ function PostsPage() {
                     setFilter={setFilter}
                 />
 
-                <section className="input filter container row">
+                <section className="input-container filter container row">
                     <label htmlFor="tags">Filtra per Tag</label>
                     <select
                         name="tags"
@@ -134,23 +132,25 @@ function PostsPage() {
                     </select>
                 </section>
 
-                {posts.length > 0 ? (
-                    <ul className="container row">
-                        {posts.map((curPost) => (
-                            <AppCard
-                                key={curPost.id}
-                                curPost={curPost}
-                                onRemove={() => {
-                                    removePost(curPost)
-                                }}
-                            />
-                        ))}
-                    </ul>
-                ) : (
-                    <p className="empty-list container row">
-                        La tua lista è vuota! Aggiungi qualche Post!
-                    </p>
-                )}
+                <section>
+                    {posts.length > 0 ? (
+                        <ul className="container row">
+                            {posts.map((curPost) => (
+                                <AppCard
+                                    key={curPost.id}
+                                    curPost={curPost}
+                                    onRemove={() => {
+                                        removePost(curPost)
+                                    }}
+                                />
+                            ))}
+                        </ul>
+                    ) : (
+                        <p className="empty-list container row">
+                            La tua lista è vuota! Aggiungi qualche Post!
+                        </p>
+                    )}
+                </section>
             </main>
 
         </>

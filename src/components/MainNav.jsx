@@ -12,16 +12,16 @@ function MainNav() {
         },
         {
             path: "/about",
-            title: "About",
+            title: "About Us",
         },
     ]
 
     return (
         <nav>
-            <ul>
-                {paths.map((curItem) => (
-                    <li>
-                        <NavLink to={curItem.path}>{curItem.title}</NavLink>
+            <ul >
+                {paths.map((curItem, index) => (
+                    <li key={index}>
+                        <NavLink  to={curItem.path}>{curItem.title}</NavLink>
                     </li>
                 ))}
             </ul>
