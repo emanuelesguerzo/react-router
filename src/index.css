@@ -198,7 +198,23 @@ option {
   cursor: pointer;
 }
 
-/* Detail */
+/* Previous / Next Page Button */
+.prev-next-container {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-next,
+.btn-prev {
+  background-color: #000000;
+  color: #ffffff;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+}
+
+/* Detail Button */
 .btn-detail {
   display: inline-block;
   width: 45px;
@@ -207,6 +223,7 @@ option {
   border-radius: 50%;
   border: none;
   line-height: 45px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 /* Remove Button */
@@ -361,6 +378,33 @@ h4 {
   font-size: 1.3rem;
 }
 
+/* DETAIL PAGE */
+.detail-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto 40px auto;
+}
+
+.detail-page h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.detail-page img {
+  display: block;
+  border-radius: 21px;
+  margin-bottom: 40px;
+  width: 90%;
+}
+
+.detail-page p {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
 /* ////////////////// */
 /* // MEDIA QUERY // */
 /* //////////////// */
@@ -406,5 +450,9 @@ h4 {
   /* Filter Input */
   .filter {
     gap: 12px;
+  }
+
+  .page-header {
+    flex-direction: row;
   }
 }

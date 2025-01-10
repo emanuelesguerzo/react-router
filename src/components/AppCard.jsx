@@ -42,8 +42,8 @@ const AppCard = ({ curPost, onRemove }) => {
                 <h2>{curPost.title}</h2>
 
                 <div className="card-buttons">
-                    <Link className="btn btn-detail">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                    <Link className="btn btn-detail" to={`/posts/${curPost.id}`}>
+                        <i className="fa-solid fa-magnifying-glass"></i>
                     </Link>
                     <button
                         className="btn remove"

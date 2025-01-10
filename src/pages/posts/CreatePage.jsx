@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const apiUrl = import.meta.env.VITE_API_URL;
 
 const initialPostData = {
@@ -69,7 +69,8 @@ function CreatePage() {
 
         axios.post("http://localhost:3000/posts", newPost)
             .then((resp) => {
-                navigate("/posts")
+                const createdPostId = resp.data.id;
+                navigate(`/posts/${createdPostId}`)
             })
             .catch((err) => {
                 console.error("Errore durante l'invio del post:", err)
