@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 const apiUrl = import.meta.env.VITE_API_URL;
 
 const initialPostData = {
@@ -76,6 +76,15 @@ function CreatePage() {
             })
     }
         return (
+            <>
+            <div className="page-header container">
+                <button className="btn-back" onClick={() => navigate(-1)}>
+                    <i className="fa-solid fa-arrow-left"></i>
+                </button>
+
+                <h2>Crea il tuo post!</h2>
+            </div>
+            
 
             <form action="" className="container" onSubmit={handleNewPostSubmit}>
 
@@ -160,7 +169,7 @@ function CreatePage() {
                 </button>
 
             </form>
-
+            </>
         )
     }
 

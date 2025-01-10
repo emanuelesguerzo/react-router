@@ -4,27 +4,6 @@ import axios from "axios"
 import AppCard from "../../components/AppCard";
 const apiUrl = import.meta.env.VITE_API_URL; 
 
-// const initialPostData = { 
-//     title: "",
-//     content: "",
-//     image: "",
-//     tags: [],
-// }
-
-// const availableTags = [ 
-//     "Dolce",
-//     "Primo",
-//     "Rustico",
-//     "Tradizionale",
-//     "Snack",
-//     "Salato",
-//     "Fritto",
-//     "Semplice",
-//     "Colazione",
-//     "Vegetariano",
-//     "Colorato",
-// ]
-
 function PostsPage() {
 
     const [posts, setPosts] = useState([]);
