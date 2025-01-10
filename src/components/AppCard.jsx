@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const AppCard = ({ curPost, onRemove }) => {
 
     const getImgSrc = (path) => {
@@ -38,12 +40,18 @@ const AppCard = ({ curPost, onRemove }) => {
             </div>
             <div className="card-heading">
                 <h2>{curPost.title}</h2>
-                <button
-                    className="btn remove"
-                    onClick={onRemove}
-                >
-                    <i className="fa-solid fa-trash"></i>
-                </button>
+
+                <div className="card-buttons">
+                    <Link className="btn btn-detail">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </Link>
+                    <button
+                        className="btn remove"
+                        onClick={onRemove}
+                    >
+                        <i className="fa-solid fa-trash"></i>
+                    </button>
+                </div>
             </div>
             <div className="card-content">
                 <p>{curPost.content}</p>

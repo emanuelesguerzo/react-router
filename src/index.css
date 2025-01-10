@@ -198,6 +198,17 @@ option {
   cursor: pointer;
 }
 
+/* Detail */
+.btn-detail {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background-color: var(--main-blue);
+  border-radius: 50%;
+  border: none;
+  line-height: 45px;
+}
+
 /* Remove Button */
 .remove {
   display: inline-block;
@@ -217,6 +228,10 @@ option {
 
 .btn-back:hover {
   background-color: #333232;
+}
+
+.btn-detail:hover {
+  background-color: var(--main-blue-hover);
 }
 
 .btn.remove:hover {
@@ -242,6 +257,12 @@ a {
 .card-image img {
   width: 100%;
   border-radius: 6px;
+}
+
+/* Card Buttons */
+.card-buttons {
+  display: flex;
+  gap: 10px;
 }
 
 /* Card Tags */
