@@ -66,10 +66,10 @@ function PostsPage() {
                         name="tags"
                         id=""
                         value={filter}
-                        onChange={(event) => setFilter(event.target.value.toLowerCase())}
+                        onChange={(event) => setFilter(event.target.value)}
                     >
                         <option value="all">Tutti</option>
-                        {tag.map((curTag, index) => <option key={index} value={curTag.toLowerCase()}>{curTag}</option>)}
+                        {tag.map((curTag, index) => <option key={index} value={curTag}>{curTag}</option>)}
                     </select>
                 </section>
 

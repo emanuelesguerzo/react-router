@@ -1,6 +1,6 @@
 function HomePage() {
     return (
-        <main>
+        <main className="container">
            <h1>Welcome Home!</h1> 
         </main>
     )

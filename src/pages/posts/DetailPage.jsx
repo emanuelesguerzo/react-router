@@ -8,17 +8,34 @@ function DetailPage() {
     const { id } = useParams();
     const navigate = useNavigate();
 
+
     useEffect(() => {
         axios.get(`${apiUrl}/posts/${id}`)
             .then((resp) => {
                 setPosts(resp.data)
             })
             .catch((err) => {
-                console.error(404)
+                if(err.status === 404) {
+                    navigate("/not-found")
+                }
             })
     }, [id])
 
+    const getImgSrc = (path) => {
+
+        if (!path) {
+            return "https://placehold.co/600x400";
+        }
+
+        if (path.startsWith("http://") || path.startsWith("https://")) {
+            return path;
+        } else {
+            return `http://localhost:3000${path}`;
+        }
+    }
+
     return (
+
         <main>
 
             <div className="page-header container">
@@ -26,7 +43,7 @@ function DetailPage() {
                     <i className="fa-solid fa-arrow-left"></i>
                 </button>
 
-                <h2>Dettagli Post numero {id}</h2>
+                <h2>Dettagli del Post numero {id}</h2>
             </div>
 
             <div className="detail-page">
@@ -35,7 +52,10 @@ function DetailPage() {
                     {posts.title}
                 </h3>
 
-                <img className="" src={`${apiUrl}/${posts.image}`} alt="Immagine del Post" />
+                <div className="detail-page-image-container">
+                    <img className="" src={`${apiUrl}/${posts.image}`} alt="Immagine del Post" />
+                </div>
+
 
                 <p>
                     {'"' + posts.content + '"'}

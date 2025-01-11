@@ -5,9 +5,11 @@ import AppFooter from "./AppFooter";
 function AppLayout() {
     return (
         <>
-            <AppHeader />
-            <Outlet />
-            <AppFooter />
+            <div className="app-layout">
+                <AppHeader />
+                <Outlet />  
+                <AppFooter />
+            </div>
         </>
     )
 }

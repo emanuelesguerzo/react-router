@@ -87,7 +87,7 @@ function CreatePage() {
             </div>
             
 
-            <form action="" className="container" onSubmit={handleNewPostSubmit}>
+            <form action="" className="form-container container" onSubmit={handleNewPostSubmit}>
 
                 {/* Title Input */}
                 <div className="input-container post-title">
