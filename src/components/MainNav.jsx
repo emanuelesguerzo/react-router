@@ -12,7 +12,7 @@ function MainNav() {
         },
         {
             path: "/about",
-            title: "About Us",
+            title: "About",
         },
     ]
 

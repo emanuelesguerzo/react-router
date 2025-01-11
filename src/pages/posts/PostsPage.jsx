@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios"
 import AppCard from "../../components/AppCard";
-const apiUrl = import.meta.env.VITE_API_URL; 
+const apiUrl = import.meta.env.VITE_API_URL;
 
 function PostsPage() {
 
     const [posts, setPosts] = useState([]);
     const [filter, setFilter] = useState("all")
     const [tag, setTag] = useState([])
+    const navigate = useNavigate();
 
     useEffect(() => {
         getPosts();
@@ -56,8 +57,16 @@ function PostsPage() {
         <>
             <main>
 
+                <div className="page-header container">
+                    <button className="btn-back" onClick={() => navigate("/")}>
+                        <i className="fa-solid fa-arrow-left"></i> Home
+                    </button>
+
+                   <h2>I tuoi Post</h2>
+                </div>
+
                 <Link className="btn-new container" to="/posts/create">
-                    Aggiungi nuovo Post!
+                   + Aggiungi nuovo post
                 </Link>
 
                 <section className="input-container filter container row">
@@ -79,7 +88,7 @@ function PostsPage() {
                             {posts.map((curPost) => (
                                 <AppCard
                                     key={curPost.id}
-                                    curPost={curPost} 
+                                    curPost={curPost}
                                     onRemove={() => {
                                         removePost(curPost)
                                     }}

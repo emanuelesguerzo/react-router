@@ -37,7 +37,7 @@ ul {
 /* Layout */
 .container {
   margin: 0 auto;
-  width: 70%; 
+  width: 80%; 
   display: flex;
   flex-direction: column;
 }
@@ -87,12 +87,13 @@ nav ul {
 nav a {
   color: #000000;
   text-decoration: none;
+  padding: 10px 0;
 }
 
 /* Nav Active */
 nav .active {
   color: #ffffff;
-  background-color: var(--main-blue);
+  background-color: #000000;
   padding: 10px 18px;
   border-radius: 25px;
 }
@@ -182,25 +183,23 @@ option {
 /* Add New Button */
 .btn-new {
   background-color: var(--main-blue);
-  width: 200px;
   color: #ffffff;
   margin-bottom: 20px;
   padding: 10px;
   border-radius: 21px;
-  transition: scale 0.4s ease-in-out;
   display: block;
+  width: 50%;
+  transition: background-color 0.4s ease-in-out;
 }
 
 /* Back Button */
 .btn-back {
   background-color: #000000;
   color: #ffffff;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
+  padding: 10px 15px;
   border-radius: 12px;
-  line-height: 28px;
   cursor: pointer;
+  border: none;
 }
 
 /* Previous / Next Page Button */
@@ -242,10 +241,13 @@ option {
 }
 
 /* Button Hovers */
-.btn-new:hover,
 .btn.submit:hover {
   background-color: var(--main-blue-hover); 
   scale: 1.1;
+}
+
+.btn-new:hover {
+  background-color: var(--main-blue-hover); 
 }
 
 .btn-back:hover {
@@ -295,13 +297,15 @@ a {
   border: none;
   color: #ffffff;
   user-select: none;
+  font-size: 1.2rem;
 }
 
 .tags-list {
   display: flex; 
+  justify-content: center;
   flex-wrap: wrap; 
-  gap: 5px; 
-  padding-top: 15px;
+  gap: 10px; 
+  padding-top: 10px;
 }
 
 /* Tag Colors */
@@ -485,15 +489,13 @@ h4 {
     font-size: 1.2rem;
   }
 
-  .detail-page h3 {
-    font-size: 1.4rem
+  
+  .tag {
+    font-size: 1rem;
   }
 
-  /* Buttons */
-  .btn-back {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+  .detail-page h3 {
+    font-size: 1.4rem
   }
 
   /* Detail Page */
@@ -521,6 +523,10 @@ h4 {
     gap: 25px;
   }
 
+  nav ul {
+    gap: 20px;
+  }
+
   /* Input */
   .post-tags {
     flex-direction: column;
@@ -539,6 +545,23 @@ h4 {
 
   .page-header {
     flex-direction: row;
+  }
+
+  .card {
+    text-align: center;
+  }
+
+  .card-heading {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .card-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .detail-page {

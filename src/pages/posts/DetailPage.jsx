@@ -30,7 +30,7 @@ function DetailPage() {
         if (path.startsWith("http://") || path.startsWith("https://")) {
             return path;
         } else {
-            return `http://localhost:3000${path}`;
+            return `${apiUrl}/${path}`;
         }
     }
 
@@ -53,7 +53,7 @@ function DetailPage() {
                 </h3>
 
                 <div className="detail-page-image-container">
-                    <img className="" src={`${apiUrl}/${posts.image}`} alt="Immagine del Post" />
+                    <img className="" src={getImgSrc(posts.image)} alt="Immagine del Post" />
                 </div>
 
 
