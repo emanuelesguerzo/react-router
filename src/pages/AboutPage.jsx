@@ -2,9 +2,9 @@ import { useNavigate } from "react-router-dom";
 
 function AboutPage() {
     const navigate = useNavigate();
-    
+
     return (
-        <main className="container">
+        <main>
 
             <div className="page-header container">
                 <button className="btn-back" onClick={() => navigate("/")}>
